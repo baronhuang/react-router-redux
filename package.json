@@ -1,0 +1,67 @@
+{
+  "name": "react-router-redux",
+  "version": "1.0.0",
+  "description": "react+router+redux的一个demo程序",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node build/server.dev.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baronhuang/react-router-redux.git"
+  },
+  "author": "baronhuang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/baronhuang/react-router-redux/issues"
+  },
+  "homepage": "https://github.com/baronhuang/react-router-redux#readme",
+  "dependencies": {
+    "bluebird": "^3.4.1",
+    "express": "^4.14.0",
+    "glob": "^7.1.1",
+    "immutable": "^3.8.1",
+    "lodash": "^4.11.1",
+    "react": "^15.0.1",
+    "react-dom": "^15.0.1",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.6.1",
+    "redux": "^3.5.2",
+    "redux-thunk": "^2.1.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.7.6",
+    "babel-eslint": "^6.0.4",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-class-properties": "^6.19.0",
+    "babel-plugin-transform-es2015-classes": "^6.18.0",
+    "babel-plugin-transform-es2015-object-super": "^6.8.0",
+    "babel-plugin-transform-runtime": "^6.7.5",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-2": "^6.5.0",
+    "babel-register": "^6.7.2",
+    "babel-runtime": "^6.6.1",
+    "connect-history-api-fallback": "^1.3.0",
+    "css-loader": "^0.23.1",
+    "eventsource-polyfill": "^0.9.6",
+    "extract-text-webpack-plugin": "^0.8.2",
+    "file-loader": "^0.9.0",
+    "html-webpack-plugin": "^2.26.0",
+    "http-proxy-middleware": "^0.17.3",
+    "less": "^2.6.1",
+    "less-loader": "^2.2.3",
+    "postcss-loader": "^0.8.2",
+    "redbox-react": "^1.2.3",
+    "redux-logger": "^2.6.1",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.0",
+    "webpack-dev-middleware": "^1.9.0",
+    "webpack-hot-middleware": "^2.15.0",
+    "webpack-merge": "^2.0.0",
+    "webpack-stream": "^3.2.0"
+  }
+}
