@@ -4,11 +4,20 @@
 
 
 import React, {Component} from 'react'
+import { connect } from 'react-redux'
 
-export default class APP extends Component {
+// mapStateToProps
+@connect(state => state)
+export default class App extends Component {
+
+    constructor(props){
+        console.log(props)
+        super();
+    }
+
     render(){
         return (
-            <div>111</div>
+            <div>{this.props.children}</div>
         )
     }
 }

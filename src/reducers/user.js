@@ -10,10 +10,10 @@ import Immutable from 'immutable';
 const initState = {initDone: false};
 
 function userInfo(state = initState, action) {
-    console.log(222, state)
     return state;
 }
 
+
 export default {
-    userInfo
+    userInfo,
 }
