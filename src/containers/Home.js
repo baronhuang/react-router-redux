@@ -14,7 +14,7 @@ export default class Home extends Component {
     render(){
         console.log(this.props)
         return (
-            <div>6666</div>
+            <div>66661</div>
         )
     }
 }
