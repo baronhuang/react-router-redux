@@ -21,26 +21,26 @@ const middleware = [thunkMiddleware];
 
 
 if(process.env.NODE_ENV == 'development'){
-    middleware.push(createLogger({
-        stateTransformer: state => {
-            const newState = {};
-            for (const i of Object.keys(state)) {
-                if (Immutable.Iterable.isIterable(state[i])) {
-                    newState[i] = state[i].toJS();
-                } else {
-                    newState[i] = state[i];
-                }
-            }
-            return newState;
-        }
-    }));
+    // middleware.push(createLogger({
+    //     stateTransformer: state => {
+    //         const newState = {};
+    //         for (const i of Object.keys(state)) {
+    //             if (Immutable.Iterable.isIterable(state[i])) {
+    //                 newState[i] = state[i].toJS();
+    //             } else {
+    //                 newState[i] = state[i];
+    //             }
+    //         }
+    //         return newState;
+    //     }
+    // }));
 }
 
 
 const initState = {};
-Object.keys(window.__initialState__).map(key => (
-    initState[key] = Immutable.fromJS(window.__initialState__[key])
-));
+// Object.keys(window.__initialState__).map(key => (
+//     initState[key] = Immutable.fromJS(window.__initialState__[key])
+// ));
 
 const store = createStore(
     reducers,
