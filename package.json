@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/baronhuang/react-router-redux#readme",
   "dependencies": {
+    "axios": "^0.15.3",
     "bluebird": "^3.4.1",
     "express": "^4.14.0",
     "glob": "^7.1.1",
@@ -28,6 +29,7 @@
     "react-redux": "^4.4.5",
     "react-router": "^2.6.1",
     "redux": "^3.5.2",
+    "redux-saga": "^0.14.1",
     "redux-thunk": "^2.1.0"
   },
   "devDependencies": {
@@ -46,6 +48,7 @@
     "babel-preset-stage-2": "^6.5.0",
     "babel-register": "^6.7.2",
     "babel-runtime": "^6.6.1",
+    "classnames": "^2.2.5",
     "connect-history-api-fallback": "^1.3.0",
     "css-loader": "^0.23.1",
     "eventsource-polyfill": "^0.9.6",
@@ -53,9 +56,12 @@
     "file-loader": "^0.9.0",
     "html-webpack-plugin": "^2.26.0",
     "http-proxy-middleware": "^0.17.3",
+    "ionicons": "^3.0.0",
     "less": "^2.6.1",
     "less-loader": "^2.2.3",
     "postcss-loader": "^0.8.2",
+    "react-binding": "^0.8.0",
+    "react-hot-loader": "^1.3.1",
     "redbox-react": "^1.2.3",
     "redux-logger": "^2.6.1",
     "style-loader": "^0.13.1",
@@ -64,6 +70,7 @@
     "webpack-dev-middleware": "^1.9.0",
     "webpack-hot-middleware": "^2.15.0",
     "webpack-merge": "^2.0.0",
-    "webpack-stream": "^3.2.0"
+    "webpack-stream": "^3.2.0",
+    "weui": "^1.1.0"
   }
 }

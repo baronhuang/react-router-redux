@@ -2,14 +2,12 @@
 var path = require('path');
 
 module.exports = {
-  
-
   port: 8000,
   rootPath: path.resolve(__dirname, '../'),
   path: path.join(__dirname, '../public'), /*这个是文件最终生成在哪里的目录，跟publicPath不一样*/
   publicPath: '/',  /*这个是相对于path的目录，是文件到时候build到path里面的目录*/
   proxyTable: {
-    // '/api': 'http://localhost:9101/'
+    '/api': 'http://localhost:3000/'
   },
   // CSS Sourcemaps off by default because relative paths are "buggy"
   // with this option, according to the CSS-Loader README

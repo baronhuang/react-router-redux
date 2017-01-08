@@ -1,0 +1,103 @@
+
+/*
+由于使用了weui，这里只有一个less文件，如果是大型项目，按containers来分文件
+*/
+/************common****************/
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+}
+
+body {
+  font-family: Microsoft JhengHei,-apple-system-font,Helvetica Neue,sans-serif;
+}
+
+.show {
+  display: block!important;
+}
+.hide {
+  display: none!important;
+}
+
+.v-show {
+  visibility: visible!important;
+}
+
+.v-hide {
+  visibility: hidden!important;
+}
+
+.toast {
+  display: none;
+}
+
+/***************components******************/
+
+/***************containers*****************/
+#app-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  .weui-tab__panel {
+    &.full {
+      padding-bottom: 0px;
+    }
+  }
+  .weui-tabbar {
+    .weui-tabbar__item {
+      .weui-tabbar__label {
+        //line-height: 1;
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.sign-page {
+  height: 100%;
+  background: #eee;
+  padding: 0 15px;
+  h1 {
+    padding: 30px 0;
+    font-weight: 400;
+    font-size: 34px;
+    color: #3cc51f;
+    text-align: center;
+  }
+  .input-list {
+    background: #fff;
+    border-radius: 4px;
+    .item {
+      &+.item {
+        border-top: 1px solid #eaeaea;
+      }
+      input {
+        width: 100%;
+        height: 44px;
+        color: #000;
+        border: none;
+        background: 0 0;
+        padding-left: 15px;
+        font-size: 16px;
+        -webkit-appearance: none;
+      }
+    }
+  }
+  .ctrl {
+    margin-top: 15px;
+    .bottom {
+      color: #888;
+      text-align: right;
+      margin-top: 15px;
+    }
+  }
+}
+
+.home-page {
+
+}

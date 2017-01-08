@@ -4,7 +4,10 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
   entry: {
-    app: './src/main.js'
+    app: [
+
+      './src/main.js'
+    ]
   },
   output: {
     path: config.path,
@@ -33,6 +36,11 @@ module.exports = {
       {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract('style', 'css')
+      },
+      {
+        test: /\.js$/,
+        loaders: ['react-hot'],
+        include: path.join(__dirname, '../src')
       },
       {
         test: /\.js$/,

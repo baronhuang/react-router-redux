@@ -2,18 +2,23 @@
  * Created by Administrator on 2017/1/5 0005.
  */
 
-import { combineReducers } from 'redux'
 import Immutable from 'immutable';
-// import actionTypes from '../actions';
+import * as actions from '../actions';
 
 
-const initState = {initDone: false};
-
-function userInfo(state = initState, action) {
-    return state;
+/*用户数据*/
+function userInfo(state = {}, action) {
+    switch (action.type){
+        case actions.USER.SUCCESS:
+            return action.data;
+        case actions.USER.ERROR:
+            alert(action.error);
+        default:
+            return state;
+    }
 }
 
 
 export default {
-    userInfo,
+    userInfo
 }
