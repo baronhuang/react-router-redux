@@ -4,8 +4,9 @@
 
 
 function createRequestTypes(base) {
-    return [GET, POST, PUT, DELETE, SUCCESS, ERROR].reduce((acc, type) => {
-        acc[type] = `${base}_${type}`
+    return [GET, POST, PUT, DELETE].reduce((acc, type) => {
+        acc[type] = `${base}_${type}`;
+        acc[`${type}_SUCCESS`] = `${base}_${type}_SUCCESS`;
         return acc
     }, {})
 }
@@ -31,15 +32,15 @@ export const HIDE_TOAST = 'HIDE_TOAST'
 export const user = {
     post: (params) => action(USER.POST, {params}),
     get: (params) => action(USER.GET, {params}),
-    success: (data) => action(USER.SUCCESS, {data}),
-    error: (error) => action(USER.ERROR, {error}),
+    success: (type, data) => action([`${type}_SUCCESS`], {data}),
+    // error: (error) => action(USER.ERROR, {error}),
 }
 
 export const article = {
     post: (params) => action(ARTICLE.POST, {params}),
     get: (params) => action(ARTICLE.GET, {params}),
-    success: (data, method) => action(ARTICLE.SUCCESS, {data, method}),
-    error: (error) => action(ARTICLE.ERROR, {error}),
+    success: (type, data) => action(`${type}_SUCCESS`, {data}),
+    // error: (error) => action(ARTICLE.ERROR, {error}),
 }
 
 export const toast = {

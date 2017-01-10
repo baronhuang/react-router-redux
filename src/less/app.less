@@ -43,6 +43,7 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
+  background: #eee;
   .weui-tab__panel {
     &.full {
       padding-bottom: 0px;
@@ -99,5 +100,62 @@ body {
 }
 
 .home-page {
+
+}
+
+.my-page {
+  .my-header {
+    height: 100px;
+    background: url('../images/my-bg.jpg') no-repeat;
+    background-size: cover;
+    .mask {
+      height: 100%;
+      padding: 20px 15px;
+      z-index: 2;
+      background-color: rgba(0,0,0,.5);
+      .avatar {
+        width: 60px;
+        height: 60px;
+        border: 2px #fff solid;
+        border-radius: 3px;
+      }
+      .info {
+        margin-left: 6px;
+        color: #fff;
+        .setting-btn {
+          font-size: 12px;
+          color: #fff;
+          border-color: #fff;
+          padding: 0 .8em;
+          line-height: 1.7;
+        }
+      }
+    }
+  }
+
+  .compose-btn {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    right: 20px;
+    bottom: 55px;
+    border-radius: 50%;
+    background: #1aad19;
+    color: #fff;
+    justify-content: center;
+    display: -webkit-flex;
+    align-items: center;
+    font-size: 28px;
+    box-shadow: 0 2px 6px rgba(0,0,0,.4);
+  }
+}
+
+.edit-page {
+  .weui-cells_form {
+    margin-top: 0;
+    .edit-wrap {
+      margin-top: 0;
+    }
+  }
 
 }

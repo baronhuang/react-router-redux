@@ -10,6 +10,7 @@ import Home from './containers/Home'
 import My from './containers/My'
 import Detail from './containers/Detail'
 import Sign from './containers/Sign'
+import Edit from './containers/Edit'
 
 export default (
     <Route path="/" component={App}>
@@ -18,5 +19,6 @@ export default (
         <Route path="/detail/:id" component={Detail} />
         <Route path="/signin" component={Sign} />
         <Route path="/signup" component={Sign} />
+        <Route path="/edit" component={Edit} />
     </Route>
 );

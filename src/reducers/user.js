@@ -9,10 +9,11 @@ import * as actions from '../actions';
 /*用户数据*/
 function userInfo(state = {}, action) {
     switch (action.type){
-        case actions.USER.SUCCESS:
+        case actions.USER.GET_SUCCESS:
+        case actions.USER.POST_SUCCESS:
             return action.data;
-        case actions.USER.ERROR:
-            alert(action.error);
+        // case actions.USER.ERROR:
+        //     alert(action.error);
         default:
             return state;
     }

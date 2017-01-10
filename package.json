@@ -56,7 +56,7 @@
     "file-loader": "^0.9.0",
     "html-webpack-plugin": "^2.26.0",
     "http-proxy-middleware": "^0.17.3",
-    "ionicons": "^3.0.0",
+    "ionicons": "^2.0.1",
     "less": "^2.6.1",
     "less-loader": "^2.2.3",
     "postcss-loader": "^0.8.2",

@@ -15,9 +15,7 @@ export default class Home extends Component {
         super();
     }
     componentWillMount(){
-        if(this.props.articles.length == 0){
-            this.props.dispatch(actions.article.get());
-        }
+        this.props.dispatch(actions.article.get());
     }
 
     componentWillReceiveProps(nextProps) {

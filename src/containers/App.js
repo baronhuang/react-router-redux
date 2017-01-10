@@ -3,7 +3,7 @@
  */
 
 import 'weui/dist/style/weui.min.css'
-// import 'ionicons/dist/css/ionicons.css'
+import 'ionicons/css/ionicons.min.css'
 import '../less/app.less'
 import React, {Component} from 'react'
 import { connect } from 'react-redux'

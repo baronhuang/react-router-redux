@@ -6,6 +6,8 @@
  * 工具类
  * */
 export default {
+
+    /*时间格式转换*/
     dateFormat(strDateTime){
         let years, month, days, hours, minutes, seconds;
         if (strDateTime) {
@@ -28,8 +30,7 @@ export default {
             seconds = newDate.getSeconds();
             if (Number(seconds) < 10) seconds = "0" + seconds;
 
-            newDate = years + "年" + month + "月" + days +
-                " " + hours + ":" + minutes ;
+            newDate = `${years}年${month}月${days}日 ${hours}:${minutes}`;
 
             return newDate;
         }

@@ -16,8 +16,17 @@ export default class TextBoxInput extends Component {
         const handleChange = function(e){
             model.value = e.target.value;
         }
-        return (
-            <input {...props} onChange={handleChange} value={model.value} />
-        )
+
+        if(type == 'textarea'){
+            return (
+                <textarea {...props} onChange={handleChange} value={model.value}></textarea>
+            )
+        }else{
+            return (
+                <input {...props} onChange={handleChange} value={model.value} />
+            )
+        }
+
+
     }
 }
