@@ -15,7 +15,10 @@ export default class Home extends Component {
         super();
     }
     componentWillMount(){
-        this.props.dispatch(actions.article.get());
+        if(this.props.articles.list.length == 0){
+            this.props.dispatch(actions.article.get({type: 'list'}));
+        }
+
     }
 
     componentWillReceiveProps(nextProps) {
@@ -34,7 +37,7 @@ export default class Home extends Component {
             <div className="home-page">
                 <div className="weui-panel">
                     <div className="weui-panel__hd">发现广场</div>
-                    <Articlelist dataList={this.props.articles}></Articlelist>
+                    <Articlelist dataList={this.props.articles.list}></Articlelist>
                 </div>
             </div>
         )

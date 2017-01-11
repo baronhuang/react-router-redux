@@ -24,11 +24,11 @@ import sagas from './sagas'
 axios.interceptors.request.use(function (config) {
     config.headers['Content-Type'] = 'application/x-www-form-urlencoded';
     console.log(333, config.data)
-    if(config.data){
+    if(config.data && config.type != 'file'){
         var str = [];
         var data = config.data;
         for(var p in data)
-            if (data.hasOwnProperty(p) && data[p]) {
+            if (data.hasOwnProperty(p) && data[p] != undefined) {
                 str.push(encodeURIComponent(p) + "=" + encodeURIComponent(data[p]));
             }
         config.data = str.join("&");

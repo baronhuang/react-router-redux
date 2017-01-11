@@ -11,6 +11,7 @@ import My from './containers/My'
 import Detail from './containers/Detail'
 import Sign from './containers/Sign'
 import Edit from './containers/Edit'
+import Setting from './containers/Setting'
 
 export default (
     <Route path="/" component={App}>
@@ -20,5 +21,6 @@ export default (
         <Route path="/signin" component={Sign} />
         <Route path="/signup" component={Sign} />
         <Route path="/edit" component={Edit} />
+        <Route path="/setting" component={Setting} />
     </Route>
 );

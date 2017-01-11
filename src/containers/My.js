@@ -13,7 +13,10 @@ import * as actions from '../actions'
 export default class My extends Component {
 
     componentWillMount(){
-        this.props.dispatch(actions.article.get({type: 'my'}));
+        if(this.props.articles.my.length == 0){
+            this.props.dispatch(actions.article.get({type: 'my'}));
+        }
+
     }
 
     render(){
@@ -25,7 +28,7 @@ export default class My extends Component {
                             <img className="avatar " src={require('../images/avatar.jpg')} alt=""/>
                             <div className="weui-flex__item info">
                                 <p>我是段子手</p>
-                                <div><button className="setting-btn weui-btn weui-btn_plain-primary weui-btn_mini">设置</button></div>
+                                <div><Link to="/setting" className="setting-btn weui-btn weui-btn_plain-primary weui-btn_mini">设置</Link></div>
                             </div>
                         </div>
 
@@ -34,10 +37,10 @@ export default class My extends Component {
 
                <div className="weui-panel">
                    <div className="weui-panel__hd">我的段子</div>
-                   <Articlelist dataList={this.props.articles}></Articlelist>
+                   <Articlelist dispatch={this.props.dispatch} type="my" dataList={this.props.articles.my}></Articlelist>
                </div>
 
-               <Link to="/Edit">
+               <Link to="/edit">
                    <div className="compose-btn">
                        <i className="ion-compose"></i>
                    </div>
