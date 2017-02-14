@@ -2,9 +2,6 @@
  * Created by Administrator on 2017/1/5 0005.
  */
 
-import 'weui/dist/style/weui.min.css'
-import 'ionicons/css/ionicons.min.css'
-import '../less/app.less'
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
 import classnames from 'classnames'
@@ -16,16 +13,15 @@ import Toast from '../components/Toast'
 export default class App extends Component {
 
     constructor(props){
-        console.log(props)
         super();
-        this.state = {
-            type: 'other'
-        }
+        // this.state = {
+        //     type: 'other'
+        // }
     }
 
     selectTab = (type)=>{
-        console.log(type)
-        this.setState({type: type});
+        // console.log(type)
+        // this.setState({type: type});
         browserHistory.push(`${type}`);
     }
 
@@ -46,8 +42,6 @@ export default class App extends Component {
                         </div>
                         <div onClick={this.selectTab.bind(this, '/my')} className={classnames('weui-tabbar__item', {'weui-bar__item_on':pathname=='/my'})}>
                             <p className="weui-tabbar__label">
-                                {/*<span className="icon ion-ios-people-outline"></span>*/}
-                                {/*<span className="text"></span>*/}
                                 我
                             </p>
                         </div>

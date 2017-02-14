@@ -11,9 +11,8 @@ function userInfo(state = {}, action) {
     switch (action.type){
         case actions.USER.GET_SUCCESS:
         case actions.USER.POST_SUCCESS:
-            return action.data;
-        // case actions.USER.ERROR:
-        //     alert(action.error);
+        case actions.USER.PUT_SUCCESS:
+            return action.payload;
         default:
             return state;
     }

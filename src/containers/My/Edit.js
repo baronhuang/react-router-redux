@@ -3,11 +3,13 @@
  */
 
 
+/**
+ * 编辑段子
+ * */
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
-import Articlelist from '../components/Articlelist'
-import * as actions from '../actions'
-import TextBoxInput from '../components/TextBoxInput'
+import * as actions from '../../actions'
+import TextBoxInput from '../../components/TextBoxInput'
 import Binder from 'react-binding'
 
 // mapStateToProps

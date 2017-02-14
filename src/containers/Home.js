@@ -2,6 +2,8 @@
  * Created by Administrator on 2017/1/5.
  */
 
+
+/*首页，发现广场*/
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
 import Articlelist from '../components/Articlelist'
@@ -16,7 +18,7 @@ export default class Home extends Component {
     }
     componentWillMount(){
         if(this.props.articles.list.length == 0){
-            this.props.dispatch(actions.article.get({type: 'list'}));
+            this.props.dispatch(actions.article.get({option: 'list'}));
         }
 
     }

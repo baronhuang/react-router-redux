@@ -2,6 +2,9 @@
  * Created by Administrator on 2017/1/4 0004.
  */
 
+/**
+ * 开发环境的server服务
+ * */
 'use strict'
 /*支持es6语法*/
 require('babel-register')();
@@ -31,14 +34,6 @@ var devMiddleware = require('webpack-dev-middleware')(compiler, {
 })
 
 var hotMiddleware = require('webpack-hot-middleware')(compiler)
-// force page reload when html-webpack-plugin template changes
-// compiler.plugin('compilation', function (compilation) {
-//     compilation.plugin('html-webpack-plugin-after-emit', function (data, cb) {
-//         hotMiddleware.publish({ action: 'reload' })
-//         cb()
-//     })
-// })
-
 // proxy api requests
 Object.keys(proxyTable).forEach(function (context) {
     var options = proxyTable[context]
@@ -53,16 +48,9 @@ app.use(require('connect-history-api-fallback')())
 
 // serve webpack bundle output
 app.use(devMiddleware)
-
-// enable hot-reload and state-preserving
-// compilation error display
 app.use(hotMiddleware)
 
-// serve pure static assets
-// var staticPath = path.posix.join(config.assetsPublicPath, config.assetsSubDirectory)
-// var staticPath = path.posix.join(config.assetsPublicPath, config.assetsSubDirectory)
-app.use('/static', express.static('./static'))
-
+// app.use('/static', express.static('./static'))
 
 module.exports = app.listen(port, function (err) {
     if (err) {

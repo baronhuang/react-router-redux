@@ -2,6 +2,9 @@
  * Created by Administrator on 2017/1/7.
  */
 
+/**
+ * 登录和注册
+ * */
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
 import {Link} from 'react-router';
@@ -35,7 +38,7 @@ export default class Login extends Component {
     signin = ()=>{
         const {phone, password} = this.state.signinInfo;
         if(phone && password){
-            this.props.dispatch(actions.user.get(this.state.signinInfo));
+            this.props.dispatch(actions.user.signin(this.state.signinInfo));
         }else{
             alert('请输入完整信息');
         }
@@ -46,7 +49,7 @@ export default class Login extends Component {
         console.log(this.state);
         const {phone, name, password} = this.state.signupInfo;
         if(phone && name && password){
-            this.props.dispatch(actions.user.post(this.state.signupInfo));
+            this.props.dispatch(actions.user.signup(this.state.signupInfo));
         }else{
             alert('请输入完整信息');
         }
@@ -58,7 +61,6 @@ export default class Login extends Component {
         return (
             <div className="sign-page">
                 <h1>段子手</h1>
-                {JSON.stringify(this.props.userInfo)}
                 <div className={classnames('signin', {'hide': pathname!='/signin'})}>
                     <div className="input-list">
                         <div className="item">

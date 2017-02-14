@@ -36,6 +36,27 @@ body {
 
 /***************components******************/
 .article-list {
+  .user-info {
+    display: flex;
+    align-items: Center;
+    .avatar {
+      width: 32px;
+      height: 32px;
+      background: no-repeat center center;
+      background-size: cover;
+    }
+    .name {
+      color: #586C94;
+      font-size: 12px;
+      margin-left: 6px;
+    }
+  }
+
+  .desc {
+    color: #000;
+    font-size: 14px;
+    line-height: 1.2;
+  }
   .ctrl-item {
     width: 90px;
     .ion-trash-b {
@@ -44,7 +65,6 @@ body {
       color: #f43530;
     }
   }
-
 }
 
 /***************containers*****************/
@@ -129,6 +149,8 @@ body {
         height: 60px;
         border: 2px #fff solid;
         border-radius: 3px;
+        background: no-repeat center center;
+        background-size: cover;
       }
       .info {
         margin-left: 6px;
@@ -169,4 +191,13 @@ body {
     }
   }
 
+}
+
+.setting-page {
+  .preview-img {
+    width: 100px;
+    height: 100px;
+    background: no-repeat center center;
+    background-size: cover;
+  }
 }

@@ -13,20 +13,20 @@ function articles(state = {my: [], list: []}, action) {
             // return [...state, ...action.data];
             return {
                 ...state,
-                [action.data.dataType]: action.data.data
+                [action.payload.option]: action.payload.data
             };
 
         case actions.ARTICLE.POST_SUCCESS:
-            action.data.user = {};
+            action.payload.user = {};
             return {
                 ...state,
-                my: [action.data, ...state.my]
+                my: [action.payload, ...state.my]
             };
 
         case actions.ARTICLE.DELETE_SUCCESS:
             return {
                 ...state,
-                my: state.my.filter((item, i) => i !== action.data)
+                my: state.my.filter((item, i) => i !== action.payload)
             }
         default:
             return state;

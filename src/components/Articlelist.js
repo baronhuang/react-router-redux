@@ -31,8 +31,11 @@ export default class Articlelist extends Component {
     };
 
     delete = (item, index)=>{
-        console.log(item)
-        this.props.dispatch(actions.article.delete({_id:item._id, index}));
+        console.log(item);
+        if (confirm("确定要删除这条段子？")) {
+            this.props.dispatch(actions.article.delete({_id:item._id, index}));
+        } else {
+        }
     }
 
     render(){
@@ -44,23 +47,26 @@ export default class Articlelist extends Component {
                         return (
                             <div key={item._id} className="weui-media-box weui-media-box_text">
                                 <NgIf show={this.props.type!='my'}>
-                                    <h4 className="weui-media-box__title">{item.user.name}</h4>
+                                    <div className="weui-media-box__title user-info">
+                                        <div className="avatar" style={{'backgroundImage': `url(${item.user.avatar})`}}></div>
+                                        <span className="name">{item.user.name}</span>
+                                    </div>
                                 </NgIf>
-                                <p className="weui-media-box__desc">{item.content}</p>
+                                <p className="desc">{item.content}</p>
                                 <ul className="weui-media-box__info">
                                     <li className="weui-media-box__info__meta"><i className="ion-heart"></i>({item.like})</li>
                                     <li className="weui-media-box__info__meta">{utils.dateFormat(item.createdAt)}</li>
-                                    <li className="weui-media-box__info__meta ctrl-item">
-                                        <NgIf show={item.publicity}>
-                                            <span>公开</span>
-                                        </NgIf>
-                                        <NgIf show={!item.publicity}>
-                                            <span>私密</span>
-                                        </NgIf>
-                                        <NgIf show={this.props.type=='my'}>
+                                    <NgIf show={this.props.type=='my'}>
+                                        <li className="weui-media-box__info__meta ctrl-item">
+                                            <NgIf show={item.publicity}>
+                                                <span>公开</span>
+                                            </NgIf>
+                                            <NgIf show={!item.publicity}>
+                                                <span>私密</span>
+                                            </NgIf>
                                             <i className="ion-trash-b" onClick={this.delete.bind(this, item, i)}></i>
-                                        </NgIf>
-                                    </li>
+                                        </li>
+                                    </NgIf>
                                 </ul>
                             </div>
                         )
