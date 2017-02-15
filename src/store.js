@@ -2,7 +2,10 @@
  * Created by Administrator on 2017/2/9.
  */
 
-/*配置store*/
+/**
+ * 配置store
+ * 前端跟服务器端共用
+ * */
 import {createStore, applyMiddleware} from 'redux'
 import createSagaMiddleware, { END } from 'redux-saga'
 import createLogger from 'redux-logger'

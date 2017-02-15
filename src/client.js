@@ -2,10 +2,12 @@
  * Created by Administrator on 2017/1/4 0004.
  */
 
+/**
+ * 前端的入口文件
+ * */
 import React from 'react'
 import ReactDom from 'react-dom'
 import {Router, browserHistory} from 'react-router'
-import {createStore, applyMiddleware} from 'redux'
 import {Provider} from 'react-redux'
 import routes from './routes'
 

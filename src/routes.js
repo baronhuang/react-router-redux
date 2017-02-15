@@ -23,6 +23,7 @@ export default (
         <Route path="/detail/:id" component={Detail}/>
         <Route path="/signin" component={Sign}/>
         <Route path="/signup" component={Sign}/>
+        {/*个人后台需要登录验证*/}
         <Route path="my" component={My}>
             <IndexRoute component={MyList}/>
             <Route path="edit" component={Edit}/>

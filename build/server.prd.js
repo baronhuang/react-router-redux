@@ -16,6 +16,7 @@ import React from 'react'
 import {renderToString} from 'react-dom/server'
 import { match, createMemoryHistory, RouterContext } from 'react-router'
 import {Provider} from 'react-redux'
+import serialize from 'serialize-javascript'
 
 import config from './config'
 import routes from '../src/routes'
@@ -73,7 +74,7 @@ app.use(function(req, res) {
                 res.status(200).send(
                     html(
                         renderToString(rootComp),
-                        JSON.stringify(store.getState())
+                        serialize(store.getState())
                     )
                 )
             }).catch((e) => {

@@ -2,6 +2,9 @@
  * Created by Administrator on 2017/1/5 0005.
  */
 
+/**
+ * 最顶层的组件
+ * */
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
 import classnames from 'classnames'
