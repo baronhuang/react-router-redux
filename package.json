@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/baronhuang/react-router-redux#readme",
   "dependencies": {
-    "axios": "^0.15.3",
+    "axios": "^0.19.0",
     "bluebird": "^3.4.1",
     "express": "^4.14.0",
     "immutable": "^3.8.1",
